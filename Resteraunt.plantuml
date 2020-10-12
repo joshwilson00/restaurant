@@ -1,0 +1,49 @@
+@startuml
+    class Resteraunt {
+        - id: Integer
+        - name: String
+        - menus: Array<Menu>
+        --Setters--
+        + addMenu(<Menu>)
+        + removeMenu(<Menu>)
+        + setName(name)
+        --Getters--
+        + getId()
+        + getName()
+        + getMenus()
+    }
+
+    class Menu{
+        - id: Integer
+        - title: String
+        - icon: String
+        - items: Array<Items>
+        --Setters--
+        + addItem(<Item>)
+        + removeItem(<Item>)
+        + setIcon(url)
+        + setTitle(title)
+        --Getters--
+        + getId()
+        + getTitle()
+        + getIcon()
+        + getItems()
+    }
+
+    class Item {
+        - id: Integer
+        - name: String
+        - icon: String
+        - cost: float
+        --Setters--
+        + setName(name)
+        + setCost(cost)
+        --Getters--
+        + getId()
+        + getName()
+        + getCost()
+    }
+
+    Resteraunt --{ Menu
+    Menu --{ Item
+@enduml

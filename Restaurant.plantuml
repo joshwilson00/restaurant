@@ -1,5 +1,5 @@
 @startuml
-    class Resteraunt {
+    class Restaurant {
         - id: Integer
         - name: String
         - menus: Array<Menu>
@@ -44,6 +44,6 @@
         + getCost()
     }
 
-    Resteraunt --{ Menu
+    Restaurant --{ Menu
     Menu --{ Item
 @enduml

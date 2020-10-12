@@ -3,14 +3,18 @@
         - id: Integer
         - name: String
         - menus: Array<Menu>
+        - reviews: Array<Review>
         --Setters--
         + addMenu(<Menu>)
         + removeMenu(<Menu>)
         + setName(name)
+        + addReview(review)
+        + removeReview(id)
         --Getters--
         + getId()
         + getName()
         + getMenus()
+        + getReviews()
     }
 
     class Menu{
@@ -44,6 +48,26 @@
         + getCost()
     }
 
+    class Review {
+        - id: Integer
+        - author: String
+        - rating: Integer
+        - desription: String
+        ---
+        checkRating(rating)
+        --Setters--
+        + setAuthor(name)
+        + setRating(rating)
+        + setDescription(description)
+        --Getters--
+        + getId()
+        + getAuthor()
+        + getRating()
+        + getDescription()
+
+    }
+
     Restaurant --{ Menu
+    Restaurant --{ Review
     Menu --{ Item
 @enduml

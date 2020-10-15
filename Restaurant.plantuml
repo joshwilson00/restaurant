@@ -5,7 +5,7 @@
         - menus: Array<Menu>
         - reviews: Array<Review>
         --Setters--
-        + addMenu(<Menu>)
+        + addMenu(Array<Menu>)
         + removeMenu(<Menu>)
         + setName(name)
         + addReview(review)

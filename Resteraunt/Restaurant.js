@@ -32,8 +32,11 @@ class Restaurant {
     setName(name){
         this.#name = name;
     }
-    addMenu(menu){
-        this.#menus.push(menu);
+    // addMenu(menu){
+    //     this.#menus.push(menu);
+    // }
+    addMenu(...menus){
+        menus.forEach(menu => this.#menus.push(menu));
     }
     removeMenu(id){
         const newArray = this.#menus.filter(menu =>{ return menu.getId() != id});
